@@ -2,14 +2,13 @@
 """
 Charles Truscott Watters
 USanDiego MicroMasters 
-
 runfile('C:/Users/Charles/Desktop/change.py', wdir='C:/Users/Charles/Desktop')
-monetary_value: 3 coins: [2, 2, 0.5, 0.25, 0.25] denominations: [[3, 1]]
-monetary_value: 1 coins: [2, 2, 0.5, 0.25, 0.25] denominations: [[3, 1], [1, 1]]
-monetary_value: 0.5 coins: [2, 2, 0.5, 0.25, 0.25] denominations: [[3, 1], [1, 1], [0.5, 1]]
-monetary_value: 0.25 coins: [2, 2, 0.5, 0.25, 0.25] denominations: [[3, 1], [1, 1], [0.5, 1], [0.25, 1]]
-monetary_value: 0.0 coins: [2, 2, 0.5, 0.25, 0.25] denominations: [[3, 1], [1, 1], [0.5, 1], [0.25, 1], [0.0, 1]]
-Denominations: [[3, 1], [1, 1], [0.5, 1], [0.25, 1], [0.0, 1]]
+monetary_value: 3 coins: [2, 2, 0.5, 0.25, 0.25] denominations: [[2, 1]]
+monetary_value: 1 coins: [2, 2, 0.5, 0.25, 0.25] denominations: [[2, 1], [2, 1]]
+monetary_value: 0.5 coins: [2, 2, 0.5, 0.25, 0.25] denominations: [[2, 1], [2, 1], [0.5, 1]]
+monetary_value: 0.25 coins: [2, 2, 0.5, 0.25, 0.25] denominations: [[2, 1], [2, 1], [0.5, 1], [0.25, 1]]
+monetary_value: 0.0 coins: [2, 2, 0.5, 0.25, 0.25] denominations: [[2, 1], [2, 1], [0.5, 1], [0.25, 1], [0.25, 1]]
+Denominations: [[2, 1], [2, 1], [0.5, 1], [0.25, 1], [0.25, 1]]
 i: 2 r: 1 denominations: [[2, 2]]
 i: 0 r: 1 denominations: [[2, 2], [2, 0]]
 i: 2.0 r: 0.0 denominations: [[2, 2], [2, 0], [0.5, 2.0]]
@@ -24,7 +23,7 @@ def change_simple(monetary_value = 5, coins = [], denominations = []):
     while monetary_value > 0:
         for coin in coins:
             monetary_value -= coin
-            denominations.append([monetary_value, 1])
+            denominations.append([coin, 1])
 
             print("monetary_value: {} coins: {} denominations: {}".format(monetary_value, coins, denominations))
     print("Denominations: {}".format(denominations))
