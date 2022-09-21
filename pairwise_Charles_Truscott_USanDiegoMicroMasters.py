@@ -2,6 +2,12 @@
 """
 Charles Truscott
 USanDiego MicroMasters `Algorithms and Data Structures MicroMasters`
+Attempt #2
+6
+10 20 30 309 800 200
+The maximum pairwise product of [10, 20, 30, 309, 800, 200] is 247200
+Charles Truscott Watters for a USanDiego MicroMasters unit
+Press any key to continue . . .
 """
 import math
 def max_pairwise_product(n):
@@ -17,10 +23,10 @@ def max_pairwise_product(n):
                     s += n[i + 1]
                 if s > prev_s:
                     ans = s
-                print("k: {}, n[i] + 1: {} i: {} j: {} s: {} prev_s: {}".format(k, n[i+ 1], i, j, s, prev_s))
+#                print("k: {}, n[i + 1]: {} i: {} j: {} s: {} prev_s: {}".format(k, n[i + 1], i, j, s, prev_s))
             prev_s = s
-        print("{}".format(s))
-        return s
+        print("The maximum pairwise product of {} is {}".format(n, ans))
+        return ans
         
         
 
@@ -35,6 +41,7 @@ def main():
 
 #    print(z)
     max_pairwise_product(z)
+    print("Charles Truscott Watters for a USanDiego MicroMasters unit")
     
     
     
